@@ -133,15 +133,15 @@ user_pref("geo.provider.network.url", "");
 user_pref("geo.wifi.uri", "");
 user_pref("permissions.default.geo", 0);
 user_pref("permissions.default.desktop-notification", 0);
-user_pref("browser.search.countryCode",				"US");
-user_pref("browser.search.region",				"US");
+user_pref("browser.search.countryCode", "US");
+user_pref("browser.search.region", "US");
 user_pref("browser.contentblocking.category", "strict");
 user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
 user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
 user_pref("browser.search.defaultenginename", "DuckDuckGo");
 user_pref("browser.search.selectedEngine", "DuckDuckGo");
 user_pref("browser.search.hiddenOneOffs", "Google,Bing,Yahoo,Amazon.com,eBay,Wikipedia (en)");
-user_pref("browser.search.openintab", true);  // optional: search opens in a new tab
+user_pref("browser.search.openintab", true);
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 user_pref("browser.search.reset.enabled", false);
