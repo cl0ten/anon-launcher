@@ -128,7 +128,7 @@ user_pref("browser.newtabpage.activity-stream.enabled", false);
 user_pref("identity.fxaccounts.enabled", false);
 user_pref("identity.fxaccounts.remote.login.uri", "");
 user_pref("geo.enabled", false);
-user_pref("geo.provider.ms-windows-location", disabled);
+user_pref("geo.provider.ms-windows-location", false);
 user_pref("geo.provider.network.url", "");
 user_pref("geo.wifi.uri", "");
 user_pref("permissions.default.geo", 0);
