@@ -136,7 +136,7 @@ user_pref("extensions.webservice.discoverURL", "");
 user_pref("general.useragent.locale", "en-US");
 user_pref("general.warnOnAboutConfig", false);
 user_pref("geo.enabled", false);
-user_pref("geo.provider.ms-windows-location", disabled);
+user_pref("geo.provider.ms-windows-location", false);
 user_pref("geo.provider.network.url", "");
 user_pref("geo.wifi.uri", "");
 user_pref("identity.fxaccounts.enabled", false);
