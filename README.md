@@ -36,10 +36,10 @@ This will download "anon.exe", "anon-gencert.exe" and generate shortcuts for the
 
 ## 3. Usage
 
-After installation, double click the "Anon Launcher" link to start Firefox and "anon.exe" with preconfigured proxy settings (127.0.0.1:9050).
+After installation, double click the "Anon <BrowserName> Launcher" link to start Firefox and "anon.exe" with preconfigured proxy settings (127.0.0.1:9050).
 
 ```
-Anon Launcher.lnk
+Anon <BrowserName> Launcher.lnk
 ```
 
 ######################
@@ -78,12 +78,14 @@ Anon Launcher.lnk
 * README.md
 * Run_Setup.bat
 * Run_Cleanup.bat
+* anon/icon.ico
 * anon/create_shortcut.bat
 * anon/create_shortcut.ps1
 
+
 ### Generated files and folders to delete before starting a fresh setup
 
-* Anon Launcher.lnk
+* Anon <BrowserName> Launcher.lnk
 * anon/anon_profile/
 * anon/anon.exe
 * anon/anon-gencert.exe
