@@ -210,13 +210,13 @@ Write-Host "Batch file created successfully at: $batFilePath"
 
 # create shortcut that launches the full stack (anon socks5 listener + browser w proxy settings)
 $parentFolder = Split-Path $baseFolder -Parent
-$shortcutName2 = "Anon Launcher.lnk"
+$shortcutName2 = "Anon $browserName Launcher.lnk"
 $shortcutPath2 = Join-Path $parentFolder $shortcutName2
 
 $Shortcut2 = $WScriptShell.CreateShortcut($shortcutPath2)
 $Shortcut2.TargetPath = $batFilePath
 $Shortcut2.WorkingDirectory = $baseFolder
-$Shortcut2.IconLocation = $browserExe
+$Shortcut2.IconLocation =  "$baseFolder/icon.ico"
 $Shortcut2.Save()
 
 Write-Host "Shortcuts created successfully."
