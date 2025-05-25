@@ -1,12 +1,14 @@
 @echo off
 echo Cleaning up generated files and folders...
 
-rd /s /q "%~dp0anon\anon_profile"
-del /f /q "%~dp0Anon Launcher.lnk"
-del /f /q "%~dp0anon\anon.exe"
-del /f /q "%~dp0anon\anon-gencert.exe"
-del /f /q "%~dp0anon\browser-with-proxy.lnk"
-del /f /q "%~dp0anon\start_anon_browser.bat"
+pushd "%~dp0"
+rd /s /q "anon\anon_profile"
+del /f /q "Anon * Launcher.lnk"
+del /f /q "anon\anon.exe"
+del /f /q "anon\anon-gencert.exe"
+del /f /q "anon\browser-with-proxy.lnk"
+del /f /q "anon\start_anon_browser.bat"
+popd
 
 echo Cleanup complete.
 pause
