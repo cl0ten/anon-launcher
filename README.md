@@ -1,3 +1,4 @@
+![Anyone Browser Launcher](https://raw.githubusercontent.com/cl0ten/anon-launcher/refs/heads/main/anon/icon.ico)
 # Anon Launcher
 Anon Launcher for Firefox (& Chrome) on Windows
 
