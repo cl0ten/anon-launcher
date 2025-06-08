@@ -32,7 +32,7 @@ b. Run the setup script:
 ```
 Run_Setup.bat
 ```
-This will download "anon.exe", "anon-gencert.exe" and generate shortcuts for the browser.
+This will download "anon.exe", "anon-gencert.exe", uBlock extension and generate shortcuts for the browser.
 
 ## 3. Usage
 
