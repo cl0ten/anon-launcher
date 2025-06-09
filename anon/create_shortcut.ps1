@@ -285,11 +285,11 @@ user_pref("webgl.disabled", true);
     $userJsPath = Join-Path $anonProfilePath "user.js"
     $userJs | Out-File -Encoding ASCII -FilePath $userJsPath
 
-    $Shortcut1.Arguments = "-no-remote -profile `"$anonProfilePath`" -url https://check.en.anyone.tech https://arkenfox.github.io/TZP/tzp.html http://anyone.anon"
+    $Shortcut1.Arguments = "-no-remote -profile `"$anonProfilePath`" -url https://check.en.anyone.tech http://anyone.anon"
 }
 elseif ($browserName -eq "Chrome") {
     
-    $Shortcut1.Arguments = "--incognito --proxy-server=$proxyServer http://anyone.anon https://arkenfox.github.io/TZP/tzp.html https://check.en.anyone.tech"
+    $Shortcut1.Arguments = "--incognito --proxy-server=$proxyServer http://anyone.anon https://check.en.anyone.tech"
 }
 
 $Shortcut1.Save()
