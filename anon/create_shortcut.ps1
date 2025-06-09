@@ -19,6 +19,8 @@ $anonZipUrl = "https://github.com/anyone-protocol/ator-protocol/releases/downloa
 Write-Host "Downloading Anon release from $anonZipUrl..."
 Invoke-WebRequest -Uri $anonZipUrl -OutFile $anonZipPath
 
+
+
 # extract anon.exe and anon-gencert.exe
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $extractTempPath = Join-Path $baseFolder "temp_extracted"
@@ -285,11 +287,23 @@ user_pref("webgl.disabled", true);
     $userJsPath = Join-Path $anonProfilePath "user.js"
     $userJs | Out-File -Encoding ASCII -FilePath $userJsPath
 
-    $Shortcut1.Arguments = "-no-remote -profile `"$anonProfilePath`" -url https://check.en.anyone.tech http://anyone.anon"
+# check extension folder
+$extensionsPath = Join-Path $anonProfilePath "extensions"
+if (-not (Test-Path $extensionsPath)) {
+    New-Item -ItemType Directory -Path $extensionsPath | Out-Null
+}
+
+# download ublock xpi
+$ublockUrl = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+$ublockXpiPath = Join-Path $extensionsPath "uBlock0@raymondhill.net.xpi"
+
+Write-Host "Downloading uBlock Origin extension..."
+Invoke-WebRequest -Uri $ublockUrl -OutFile $ublockXpiPath
+
+$Shortcut1.Arguments = "-no-remote -profile `"$anonProfilePath`" -url https://check.en.anyone.tech http://anyone.anon"
 }
 elseif ($browserName -eq "Chrome") {
-    
-    $Shortcut1.Arguments = "--incognito --proxy-server=$proxyServer http://anyone.anon https://check.en.anyone.tech"
+$Shortcut1.Arguments = "--incognito --proxy-server=$proxyServer http://anyone.anon https://check.en.anyone.tech"
 }
 
 $Shortcut1.Save()
